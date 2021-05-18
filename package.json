@@ -39,8 +39,9 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
+    "build": "npm run clean && GATSBY_TELEMETRY_DISABLED=1 gatsby build",
+    "netlify-dev": "netlify dev",
+    "develop": "npm run clean && GATSBY_TELEMETRY_DISABLED=1 gatsby develop --host=0.0.0.0",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
